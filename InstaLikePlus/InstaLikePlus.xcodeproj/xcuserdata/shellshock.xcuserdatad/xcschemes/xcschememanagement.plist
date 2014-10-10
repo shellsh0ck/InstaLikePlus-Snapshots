@@ -4,7 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>InstaLike+.xcscheme</key>
+		<key>InstaLikePlus.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
@@ -12,12 +12,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>015012E419E7CE94006BF900</key>
+		<key>0132EAE219E8313F00E18E68</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>015012F919E7CE94006BF900</key>
+		<key>0132EAF719E8313F00E18E68</key>
 		<dict>
 			<key>primary</key>
 			<true/>

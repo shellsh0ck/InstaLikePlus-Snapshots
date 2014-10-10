@@ -5,16 +5,16 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>5FA6780B-3F14-4851-95D7-B6A904ECCFF9</string>
+	<string>7EE83A30-C19D-4511-ADB2-EA322F1B12BE</string>
 	<key>IDESourceControlProjectName</key>
-	<string>InstaLike+</string>
+	<string>InstaLikePlus</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>8C781C465FBF9441CDA38E6D5192316FA193F09C</key>
 		<string>https://github.com/shellsh0ck/InstaLikePlus-Snapshots.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>InstaLike+/InstaLike+.xcodeproj</string>
+	<string>InstaLikePlus/InstaLikePlus.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>8C781C465FBF9441CDA38E6D5192316FA193F09C</key>

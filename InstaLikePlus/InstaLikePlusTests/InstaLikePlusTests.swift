@@ -1,6 +1,6 @@
 //
-//  InstaLike_Tests.swift
-//  InstaLike+Tests
+//  InstaLikePlusTests.swift
+//  InstaLikePlusTests
 //
 //  Created by Vitaly Sulimov on 2014-10-10.
 //  Copyright (c) 2014 FIM Studio. All rights reserved.
@@ -9,7 +9,7 @@
 import UIKit
 import XCTest
 
-class InstaLike_Tests: XCTestCase {
+class InstaLikePlusTests: XCTestCase {
     
     override func setUp() {
         super.setUp()

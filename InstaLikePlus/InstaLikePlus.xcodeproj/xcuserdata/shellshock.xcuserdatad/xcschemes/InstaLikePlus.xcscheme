@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "015012E419E7CE94006BF900"
-               BuildableName = "InstaLike+.app"
-               BlueprintName = "InstaLike+"
-               ReferencedContainer = "container:InstaLike+.xcodeproj">
+               BlueprintIdentifier = "0132EAE219E8313F00E18E68"
+               BuildableName = "InstaLikePlus.app"
+               BlueprintName = "InstaLikePlus"
+               ReferencedContainer = "container:InstaLikePlus.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -28,10 +28,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "015012F919E7CE94006BF900"
-               BuildableName = "InstaLike+Tests.xctest"
-               BlueprintName = "InstaLike+Tests"
-               ReferencedContainer = "container:InstaLike+.xcodeproj">
+               BlueprintIdentifier = "0132EAF719E8313F00E18E68"
+               BuildableName = "InstaLikePlusTests.xctest"
+               BlueprintName = "InstaLikePlusTests"
+               ReferencedContainer = "container:InstaLikePlus.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -46,20 +46,20 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "015012F919E7CE94006BF900"
-               BuildableName = "InstaLike+Tests.xctest"
-               BlueprintName = "InstaLike+Tests"
-               ReferencedContainer = "container:InstaLike+.xcodeproj">
+               BlueprintIdentifier = "0132EAF719E8313F00E18E68"
+               BuildableName = "InstaLikePlusTests.xctest"
+               BlueprintName = "InstaLikePlusTests"
+               ReferencedContainer = "container:InstaLikePlus.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "015012E419E7CE94006BF900"
-            BuildableName = "InstaLike+.app"
-            BlueprintName = "InstaLike+"
-            ReferencedContainer = "container:InstaLike+.xcodeproj">
+            BlueprintIdentifier = "0132EAE219E8313F00E18E68"
+            BuildableName = "InstaLikePlus.app"
+            BlueprintName = "InstaLikePlus"
+            ReferencedContainer = "container:InstaLikePlus.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -75,10 +75,10 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "015012E419E7CE94006BF900"
-            BuildableName = "InstaLike+.app"
-            BlueprintName = "InstaLike+"
-            ReferencedContainer = "container:InstaLike+.xcodeproj">
+            BlueprintIdentifier = "0132EAE219E8313F00E18E68"
+            BuildableName = "InstaLikePlus.app"
+            BlueprintName = "InstaLikePlus"
+            ReferencedContainer = "container:InstaLikePlus.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -93,10 +93,10 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "015012E419E7CE94006BF900"
-            BuildableName = "InstaLike+.app"
-            BlueprintName = "InstaLike+"
-            ReferencedContainer = "container:InstaLike+.xcodeproj">
+            BlueprintIdentifier = "0132EAE219E8313F00E18E68"
+            BuildableName = "InstaLikePlus.app"
+            BlueprintName = "InstaLikePlus"
+            ReferencedContainer = "container:InstaLikePlus.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
