@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CategoriesViewControoller: UIViewController, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
+class CategoriesViewController: UIViewController, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
     var collectionView: UICollectionView?
     
     
@@ -94,6 +94,12 @@ class CategoriesViewControoller: UIViewController, UICollectionViewDelegateFlowL
         self.view.addSubview(headerTitle)
     }
     
+    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+        let vc = TagsViewController()
+        vc.category = fileSystem.Categories[indexPath.row]
+        self.showViewController(vc, sender: vc)
+    }
+    
     /*
     Load categories from filesystem
     */
@@ -132,56 +138,21 @@ class TagsViewController: UIViewController, UITableViewDataSource, UITableViewDe
     var category: Category?
     var tagsSetsTableView: UITableView!
     override func viewDidLoad() {
-        loadCategories()
-        loadDataModel()
-       
         initHeader(category!.Title, image: category?.Image)
          initTableView()
         
     }
-    func loadCategories() {
-        fileSystem.Categories = [
-            Category(title: "Nature", image: "nature", tagSets:
-                [
-                    TagsSet(tags: "Смерть в глазах, в душе Аллах"),
-                    TagsSet(tags: "Смерть в глазах, в душе Аллах")
-                ]
-            ),
-            Category(title: "Love", image: "love"),
-            Category(title: "Weather", image: "weather"),
-            Category(title: "Sport", image: "sport"),
-            Category(title: "Animals", image: "animals"),
-            Category(title: "People", image: "people"),
-            Category(title: "Selfies", image: "selfie"),
-            Category(title: "Holidays", image: "holidays"),
-            Category(title: "Party", image: "party"),
-            Category(title: "Family", image: "family"),
-            Category(title: "Monochrome", image: "b&w"),
-            Category(title: "Urban", image: "urban"),
-            Category(title: "Food", image: "food"),
-            Category(title: "Drinks", image: "drinks"),
-            Category(title: "Fashion", image: "fashion"),
-            Category(title: "Entertainment", image: "music"),
-            Category(title: "Electronics", image: "electronics"),
-            Category(title: "Travel", image: "travel")
-        ]
-    }
-
     // Rendering each cell
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tagsSetsTableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as TagsViewCell
         let dataModel = category?.TagSets[indexPath.row]
         cell.tagsLabel.text = dataModel?.Tags
-        cell.tagsLabel.backgroundColor = UIColor.blackColor()
         
         
         cell.tagsLabel.frame = CGRectMake(10, 10, cell.frame.width-20, cell.frame.height * 0.6)
         cell.copyBtn.frame = CGRectMake(cell.frame.width / 2 - 60, cell.tagsLabel.frame.height + 20, 120, 40)
         return cell
 
-    }
-    func loadDataModel() {
-        category = fileSystem.Categories.filter { $0.Title == "Nature"}[0]
     }
     // Returns number of rows to render, depending on category.TagsSets.count
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
