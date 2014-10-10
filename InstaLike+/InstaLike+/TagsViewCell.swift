@@ -19,12 +19,13 @@ class TagsViewCell: UITableViewCell {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
         tagsLabel = UILabel()
-        tagsLabel.numberOfLines = 4
+        tagsLabel.numberOfLines = 6
+        tagsLabel.font = UIFont(name: "HelveticaNeue-Light", size: 15)
         tagsLabel.textAlignment = .Center
         
         copyBtn = UIButton()
         copyBtn.layer.borderColor = UIColor(red: 138/255.0, green: 61/255.0, blue: 139/255.0, alpha: 1.0).CGColor
-        copyBtn.layer.borderWidth = 0.8
+        copyBtn.layer.borderWidth = 1
         copyBtn.titleLabel?.textAlignment = .Center
         copyBtn.setTitleColor(UIColor(red: 138/255.0, green: 61/255.0, blue: 139/255.0, alpha: 1.0), forState: UIControlState.Normal)
         copyBtn.setTitle("Copy", forState: UIControlState.Normal)

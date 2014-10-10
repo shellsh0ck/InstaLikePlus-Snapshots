@@ -107,8 +107,7 @@ class CategoriesViewController: UIViewController, UICollectionViewDelegateFlowLa
         fileSystem.Categories = [
             Category(title: "Nature", image: "nature", tagSets:
                 [
-                    TagsSet(tags: "Смерть в глазах, в душе Аллах"),
-                    TagsSet(tags: "Смерть в глазах, в душе Аллах")
+                    TagsSet(tags: "#flowers #flower #petal #petals #nature #beautiful #love #pretty #plants #blossom #sopretty #spring #summer #flowerstagram #flowersofinstagram #flowerstyles_gf #flowerslovers #flowerporn #botanical #floral #florals #insta_pick_blossom"),
                 ]
             ),
             Category(title: "Love", image: "love"),
@@ -203,10 +202,11 @@ class TagsViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         let backBtn = UIButton(frame: CGRectMake(10, headerBody.frame.height / 2 - 16, 70, 32))
         backBtn.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
-        backBtn.layer.borderWidth = 0.8
+        backBtn.layer.borderWidth = 1
         backBtn.layer.borderColor = UIColor.whiteColor().CGColor
         backBtn.setTitle("Back", forState: UIControlState.Normal)
         backBtn.titleLabel!.font = UIFont(name: "HelveticaNeue-Light", size: 16)
+        backBtn.addTarget(self, action: "backBtnPressed:", forControlEvents: UIControlEvents.TouchUpInside)
         /* End */
         
         
@@ -217,6 +217,10 @@ class TagsViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     override func preferredStatusBarStyle() -> UIStatusBarStyle {
         return UIStatusBarStyle.LightContent
+    }
+    
+    @IBAction func backBtnPressed(sender: UIButton) {
+        self.presentViewController(CategoriesViewController(), animated: true, completion: nil)
     }
 
 }
