@@ -105,11 +105,7 @@ class CategoriesViewController: UIViewController, UICollectionViewDelegateFlowLa
     */
     func loadCategories() {
         fileSystem.Categories = [
-            Category(title: "Nature", image: "nature", tagSets:
-                [
-                    TagsSet(tags: "#flowers #flower #petal #petals #nature #beautiful #love #pretty #plants #blossom #sopretty #spring #summer #flowerstagram #flowersofinstagram #flowerstyles_gf #flowerslovers #flowerporn #botanical #floral #florals #insta_pick_blossom"),
-                ]
-            ),
+            Category(title: "Nature", image: "nature"),
             Category(title: "Love", image: "love"),
             Category(title: "Weather", image: "weather"),
             Category(title: "Sport", image: "sport"),
@@ -139,6 +135,7 @@ class TagsViewController: UIViewController, UITableViewDataSource, UITableViewDe
     override func viewDidLoad() {
         initHeader(category!.Title, image: category?.Image)
          initTableView()
+         getTagsForCategory(categoryTitlle: category!.Title)
         
     }
     // Rendering each cell
@@ -165,12 +162,15 @@ class TagsViewController: UIViewController, UITableViewDataSource, UITableViewDe
         tagsSetsTableView!.dataSource = self
         tagsSetsTableView!.delegate = self
         tagsSetsTableView!.registerClass(TagsViewCell.self, forCellReuseIdentifier: "Cell")
+        tagsSetsTableView!.separatorStyle = .None
+        tagsSetsTableView!.separatorInset = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10)
         self.view.addSubview(tagsSetsTableView!)
     }
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         return 180
     }
+    
     /*
     Function that init app header with image, if image not passed - init header with label "Categories"
     */
@@ -221,6 +221,45 @@ class TagsViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     @IBAction func backBtnPressed(sender: UIButton) {
         self.presentViewController(CategoriesViewController(), animated: true, completion: nil)
+    }
+    
+    func getTagsForCategory(#categoryTitlle: String) {
+        let URL = NSURL(string: "http://linstalike.azurewebsites.net/getTags.php?category=\(categoryTitlle)")
+        
+        var TagsSets: [TagsSet] = [TagsSet]()
+        var output = NSMutableArray()
+        
+        let sharedSession = NSURLSession.sharedSession()
+        
+        let downloadTask: NSURLSessionDownloadTask = sharedSession.downloadTaskWithURL(URL, completionHandler: { (location: NSURL!, response: NSURLResponse!, error: NSError!) -> Void in
+            
+            if error == nil {
+                let dataObject = NSData(contentsOfURL: location)
+                let tagsSetsDictionary: NSDictionary = NSJSONSerialization.JSONObjectWithData(dataObject, options: NSJSONReadingOptions.MutableContainers, error: nil) as NSDictionary
+                self.category?.TagSets = self.jsonToCategory(tagsSetsDictionary) as [TagsSet]
+                
+                dispatch_async(dispatch_get_main_queue(), {() -> Void in
+                    self.tagsSetsTableView.reloadData()
+                    self.tagsSetsTableView!.separatorStyle = UITableViewCellSeparatorStyle.SingleLine
+
+                })
+                
+            }
+            else {
+                println(error)
+            }
+        })
+        downloadTask.resume()
+        
+    }
+    
+    func jsonToCategory(json: NSDictionary) -> AnyObject {
+        var output: NSMutableArray = NSMutableArray()
+        for item in json["result"]! as NSMutableArray {
+            output.addObject(TagsSet(tags: item["tags"] as String))
+        }
+        
+        return output
     }
 
 }
