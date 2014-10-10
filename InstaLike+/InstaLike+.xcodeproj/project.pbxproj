@@ -14,6 +14,7 @@
 		0150130119E7CE94006BF900 /* InstaLike_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0150130019E7CE94006BF900 /* InstaLike_Tests.swift */; };
 		0150130B19E7D0E5006BF900 /* CategoriesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0150130A19E7D0E5006BF900 /* CategoriesCell.swift */; };
 		0150130D19E7D5A1006BF900 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0150130C19E7D5A1006BF900 /* Models.swift */; };
+		745F0E7D19E7E57F007FCCB4 /* TagsViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745F0E7C19E7E57F007FCCB4 /* TagsViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		0150130019E7CE94006BF900 /* InstaLike_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstaLike_Tests.swift; sourceTree = "<group>"; };
 		0150130A19E7D0E5006BF900 /* CategoriesCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoriesCell.swift; sourceTree = "<group>"; };
 		0150130C19E7D5A1006BF900 /* Models.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		745F0E7C19E7E57F007FCCB4 /* TagsViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagsViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 			children = (
 				015012EA19E7CE94006BF900 /* AppDelegate.swift */,
 				0150130C19E7D5A1006BF900 /* Models.swift */,
+				745F0E7C19E7E57F007FCCB4 /* TagsViewCell.swift */,
 				015012EC19E7CE94006BF900 /* ViewController.swift */,
 				0150130A19E7D0E5006BF900 /* CategoriesCell.swift */,
 				015012F119E7CE94006BF900 /* Images.xcassets */,
@@ -215,6 +218,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0150130B19E7D0E5006BF900 /* CategoriesCell.swift in Sources */,
+				745F0E7D19E7E57F007FCCB4 /* TagsViewCell.swift in Sources */,
 				015012ED19E7CE94006BF900 /* ViewController.swift in Sources */,
 				015012EB19E7CE94006BF900 /* AppDelegate.swift in Sources */,
 				0150130D19E7D5A1006BF900 /* Models.swift in Sources */,
