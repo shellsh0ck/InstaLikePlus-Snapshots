@@ -151,6 +151,7 @@ class TagsViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         cell.tagsLabel.frame = CGRectMake(10, 10, cell.frame.width-20, cell.frame.height * 0.6)
         cell.copyBtn.frame = CGRectMake(cell.frame.width / 2 - 60, cell.tagsLabel.frame.height + 20, 120, 40)
+        cell.selectionStyle = UITableViewCellSelectionStyle.None
         return cell
 
     }
@@ -160,7 +161,7 @@ class TagsViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     
     func initTableView() {
-        tagsSetsTableView = UITableView(frame: CGRectMake(0, self.view.frame.height * 0.15, self.view.frame.width, self.view.frame.height * 0.85))
+        tagsSetsTableView = UITableView(frame: CGRectMake(0, self.view.frame.height * 0.2, self.view.frame.width, self.view.frame.height * 0.8))
         tagsSetsTableView.backgroundColor = UIColor.whiteColor()
         tagsSetsTableView!.dataSource = self
         tagsSetsTableView!.delegate = self
@@ -176,7 +177,7 @@ class TagsViewController: UIViewController, UITableViewDataSource, UITableViewDe
     */
     func initHeader(title: String, image:String?) {
         /* Implementing header image */
-        let headerBody: UIImageView = UIImageView(frame: CGRectMake(0, 0, self.view.frame.width, self.view.frame.height*0.15))
+        let headerBody: UIImageView = UIImageView(frame: CGRectMake(0, 0, self.view.frame.width, self.view.frame.height*0.2))
         
             /* Determining if image is not nil, if so init header with image else init with default color. */
             if image == nil {
