@@ -25,6 +25,13 @@ class ViewController: UIViewController, UICollectionViewDelegateFlowLayout, UICo
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    /*
+    Set light statusBar Style
+    */
+    override func preferredStatusBarStyle() -> UIStatusBarStyle {
+        return UIStatusBarStyle.LightContent
+    }
 
     /*
     Function that init main UI
