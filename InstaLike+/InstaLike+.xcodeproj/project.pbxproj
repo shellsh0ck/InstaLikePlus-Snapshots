@@ -9,10 +9,10 @@
 /* Begin PBXBuildFile section */
 		015012EB19E7CE94006BF900 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 015012EA19E7CE94006BF900 /* AppDelegate.swift */; };
 		015012ED19E7CE94006BF900 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 015012EC19E7CE94006BF900 /* ViewController.swift */; };
-		015012F019E7CE94006BF900 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 015012EE19E7CE94006BF900 /* Main.storyboard */; };
 		015012F219E7CE94006BF900 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 015012F119E7CE94006BF900 /* Images.xcassets */; };
 		015012F519E7CE94006BF900 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 015012F319E7CE94006BF900 /* LaunchScreen.xib */; };
 		0150130119E7CE94006BF900 /* InstaLike_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0150130019E7CE94006BF900 /* InstaLike_Tests.swift */; };
+		0150130B19E7D0E5006BF900 /* CategoriesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0150130A19E7D0E5006BF900 /* CategoriesCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,12 +30,12 @@
 		015012E919E7CE94006BF900 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		015012EA19E7CE94006BF900 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		015012EC19E7CE94006BF900 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		015012EF19E7CE94006BF900 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		015012F119E7CE94006BF900 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		015012F419E7CE94006BF900 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		015012FA19E7CE94006BF900 /* InstaLike+Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "InstaLike+Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		015012FF19E7CE94006BF900 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0150130019E7CE94006BF900 /* InstaLike_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstaLike_Tests.swift; sourceTree = "<group>"; };
+		0150130A19E7D0E5006BF900 /* CategoriesCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoriesCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,7 +79,7 @@
 			children = (
 				015012EA19E7CE94006BF900 /* AppDelegate.swift */,
 				015012EC19E7CE94006BF900 /* ViewController.swift */,
-				015012EE19E7CE94006BF900 /* Main.storyboard */,
+				0150130A19E7D0E5006BF900 /* CategoriesCell.swift */,
 				015012F119E7CE94006BF900 /* Images.xcassets */,
 				015012F319E7CE94006BF900 /* LaunchScreen.xib */,
 				015012E819E7CE94006BF900 /* Supporting Files */,
@@ -192,7 +192,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				015012F019E7CE94006BF900 /* Main.storyboard in Resources */,
 				015012F519E7CE94006BF900 /* LaunchScreen.xib in Resources */,
 				015012F219E7CE94006BF900 /* Images.xcassets in Resources */,
 			);
@@ -212,6 +211,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0150130B19E7D0E5006BF900 /* CategoriesCell.swift in Sources */,
 				015012ED19E7CE94006BF900 /* ViewController.swift in Sources */,
 				015012EB19E7CE94006BF900 /* AppDelegate.swift in Sources */,
 			);
@@ -236,14 +236,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		015012EE19E7CE94006BF900 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				015012EF19E7CE94006BF900 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		015012F319E7CE94006BF900 /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -405,6 +397,7 @@
 				0150130619E7CE94006BF900 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0150130719E7CE94006BF900 /* Build configuration list for PBXNativeTarget "InstaLike+Tests" */ = {
 			isa = XCConfigurationList;
@@ -413,6 +406,7 @@
 				0150130919E7CE94006BF900 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
